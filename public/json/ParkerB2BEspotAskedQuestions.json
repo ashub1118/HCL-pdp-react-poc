@@ -1,0 +1,54 @@
+{  
+   "resourceId":"https:\/\/cor089ya4.us.parker.corp\/wcs\/resources\/lbs\/store\/24151\/espot\/ParkerB2BEspotAskedQuestions?DM_SubstitutionValue3=en_US&DM_SubstitutionValue2=http:\/\/phdev.parker.com\/en\/b2bstore&DM_SubstitutionValue5=&pageName=CatalogEntryPage&DM_SubstitutionValue4=&DM_ReturnCatalogEntryId=true&DM_SubstitutionValue1=B2BStore&errorViewName=ProductDisplayErrorView&DM_contextPath=&pageGroup=CatalogEntry&DM_SubstitutionName2=[fullPathHomeURL]&DM_SubstitutionName3=[langlocale]&DM_SubstitutionName4=[productTotalCount]&DM_SubstitutionName5=[contentTotalCount]&DM_EmsName=ParkerB2BESpotDemo&DM_SubstitutionName1=[storeName]&productId=927670&DM_ReqCmd=ProductDisplay&DM_imagePath=\/wcsstore\/ParkerB2BStorefrontAssetStore\/&catalogId=14051&langId=-1&DM_marketingSpotBehavior=&storeId=24151&DM_ReturnCatalogGroupId=true",
+   "MarketingSpotData":[  
+      {  
+         "marketingSpotIdentifier":"715878886",
+         "eSpotName":"ParkerB2BEspotAskedQuestions",
+         "behavior":"0",
+         "nextTimeLimit":"-1",
+         "baseMarketingSpotActivityData":[  
+            {  
+               "activityIdentifierID":"0",
+               "MarketingContentDescription":[  
+                  {  
+
+                  }
+               ],
+               "marketingContentDescription":[  
+                  {  
+                     "marketingText":"<div class='faq-heading'>Frequantly Asked Questions<\/div>\n<div class=\"panel-group\" id=\"accordion\" role=\"tablist\" aria-multiselectable=\"true\">\n\t<div class=\"panel panel-default\">\n\t\t<div class=\"panel-heading faq-question\" role=\"tab\" id=\"headingOne\">\n\t\t\t<h4 class=\"panel-title\">\n\t\t\t\t<a role=\"button\" data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#collapseOne\" aria-expanded=\"true\" aria-controls=\"collapseOne\">\n\t\t\t\t\t<i class=\"more-less glyphicon glyphicon-plus\"><\/i>\n\t\t\t\t\tLorem ipsum dolor sit amet, consectetuer adipiscing elit ? \n\t\t\t\t<\/a>\n\t\t\t<\/h4>\n\t\t<\/div>\n\t\t<div id=\"collapseOne\" class=\"panel-collapse collapse\" role=\"tabpanel\" aria-labelledby=\"headingOne\">\n\t\t\t<div class=\"panel-body\">\n\t\t\t\t  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.\n\t\t\t<\/div>\n\t\t<\/div>\n\t<\/div>\n\t<div class=\"panel panel-default\">\n\t\t<div class=\"panel-heading faq-question\" role=\"tab\" id=\"headingTwo\">\n\t\t\t<h4 class=\"panel-title\">\n\t\t\t\t<a class=\"collapsed\" role=\"button\" data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#collapseTwo\" aria-expanded=\"false\" aria-controls=\"collapseTwo\">\n\t\t\t\t\t<i class=\"more-less glyphicon glyphicon-plus\"><\/i>\n\t\t\t\t\tLorem ipsum dolor sit amet, consectetuer adipiscing elit ?\n\t\t\t\t<\/a>\n\t\t\t<\/h4>\n\t\t<\/div>\n\t\t<div id=\"collapseTwo\" class=\"panel-collapse collapse\" role=\"tabpanel\" aria-labelledby=\"headingTwo\">\n\t\t\t<div class=\"panel-body\">\n\t\t\t\tAnim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.\n\t\t\t<\/div>\n\t\t<\/div>\n\t<\/div>\n\t<div class=\"panel panel-default\">\n\t\t<div class=\"panel-heading faq-question\" role=\"tab\" id=\"headingThree\">\n\t\t\t<h4 class=\"panel-title\">\n\t\t\t\t<a class=\"collapsed\" role=\"button\" data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#collapseThree\" aria-expanded=\"false\" aria-controls=\"collapseThree\">\n\t\t\t\t\t<i class=\"more-less glyphicon glyphicon-plus\"><\/i>\n\t\t\t\t\tLorem ipsum dolor sit amet, consectetuer adipiscing elit ?\n\t\t\t\t<\/a>\n\t\t\t<\/h4>\n\t\t<\/div>\n\t\t<div id=\"collapseThree\" class=\"panel-collapse collapse\" role=\"tabpanel\" aria-labelledby=\"headingThree\">\n\t\t\t<div class=\"panel-body\">\n\t\t\t\tAnim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.\n\t\t\t<\/div>\n\t\t<\/div>\n\t<\/div>\n<\/div>",
+                     "language":"-1"
+                  }
+               ],
+               "baseMarketingSpotActivityID":"715902235",
+               "contentFormatId":"2",
+               "properties":[  
+                  {  
+                     "baseMarketingKey":"mktActivityDescription"
+                  },
+                  {  
+                     "baseMarketingValue":"1.0",
+                     "baseMarketingKey":"displaySequence"
+                  }
+               ],
+               "contentName":"ParkerB2BContentAskedQuestions",
+               "baseMarketingSpotDataType":"MarketingContent",
+               "contentId":"715902235",
+               "contentFormatName":"Text",
+               "activityPriority":"1",
+               "contentStoreId":"24151",
+               "baseMarketingSpotActivityName":"ParkerB2BContentAskedQuestions",
+               "contentClickAction":"None"
+            }
+         ],
+         "defaultContentDisplaySequence":[  
+            {  
+               "displaySequence":"1.0",
+               "resultFormat":"MarketingContent",
+               "resultId":"715902235"
+            }
+         ]
+      }
+   ],
+   "resourceName":"espot"
+}

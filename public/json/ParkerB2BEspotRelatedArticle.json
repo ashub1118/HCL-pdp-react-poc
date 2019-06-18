@@ -1,0 +1,54 @@
+{  
+   "resourceId":"https:\/\/cor089ya4.us.parker.corp\/wcs\/resources\/lbs\/store\/24151\/espot\/ParkerB2BEspotRelatedArticle?DM_SubstitutionValue3=en_US&DM_SubstitutionValue2=http:\/\/phdev.parker.com\/en\/b2bstore&DM_SubstitutionValue5=&pageName=CatalogEntryPage&DM_SubstitutionValue4=&DM_ReturnCatalogEntryId=true&DM_SubstitutionValue1=B2BStore&errorViewName=ProductDisplayErrorView&DM_contextPath=&pageGroup=CatalogEntry&DM_SubstitutionName2=[fullPathHomeURL]&DM_SubstitutionName3=[langlocale]&DM_SubstitutionName4=[productTotalCount]&DM_SubstitutionName5=[contentTotalCount]&DM_EmsName=ParkerB2BESpotDemo&DM_SubstitutionName1=[storeName]&productId=927670&DM_ReqCmd=ProductDisplay&DM_imagePath=\/wcsstore\/ParkerB2BStorefrontAssetStore\/&catalogId=14051&langId=-1&DM_marketingSpotBehavior=&storeId=24151&DM_ReturnCatalogGroupId=true",
+   "MarketingSpotData":[  
+      {  
+         "marketingSpotIdentifier":"715878887",
+         "eSpotName":"ParkerB2BEspotRelatedArticle",
+         "behavior":"0",
+         "nextTimeLimit":"-1",
+         "baseMarketingSpotActivityData":[  
+            {  
+               "activityIdentifierID":"0",
+               "MarketingContentDescription":[  
+                  {  
+
+                  }
+               ],
+               "marketingContentDescription":[  
+                  {  
+                     "marketingText":"<div style=\"border:0px red solid; float:left; width:100%;\">\n<div style=\"width:30%; float:left; margin:0 1% 0 1%\">\n<div style=\"text-align: center;\">\n<div style=\"width:70%;\">\n\t<img title=\"ParkerB2BEspotRelatedArticle\" alt=\"ParkerB2BEspotRelatedArticle Image\" src=\"\/wcsstore\/ParkerB2BStorefrontAssetStore\/images\/1.png\" class=\"product-image\" >\n<\/div>\n\t\t<p style=\"text-align: left; font-size: 18px;\">Solenoid Valve Selection for Harsh<br>\n\tOutdoor Applications<\/p>\n\t<p style=\"text-align: left; font-size: 12px;\">By: Fluid Gas Handing Team on Tuesday, October 4, 2016<\/p>\n<\/div>\n<\/div>\n<div style=\"width:30%; float:left; margin:0 1% 0 1%\">\n<div style=\"text-align: center;\">\n<div style=\"width:70%;\">\n\t<img title=\"ParkerB2BEspotRelatedArticle\" alt=\"ParkerB2BEspotRelatedArticle Image\" src=\"\/wcsstore\/ParkerB2BStorefrontAssetStore\/images\/2.png\" class=\"product-image\" >\n<\/div>\n\t\t<p style=\"text-align: left; font-size: 18px;\">Solenoid Valve Selection for Harsh<br>\n\tOutdoor Applications<\/p>\n\t<p style=\"text-align: left; font-size: 12px;\">By: Fluid Gas Handing Team on Tuesday, October 4, 2016<\/p>\n<\/div>\n<\/div>\n<div style=\"width:30%; float:left; margin:0 1% 0 1%\">\n<div style=\"text-align: center;\">\n\t<div style=\"width:70%;\">\n\t<img title=\"ParkerB2BEspotRelatedArticle\" alt=\"ParkerB2BEspotRelatedArticle Image\" src=\"\/wcsstore\/ParkerB2BStorefrontAssetStore\/images\/3.png\" class=\"product-image\" >\n<\/div>\n\t\t<p style=\"text-align: left; font-size: 18px;\">Solenoid Valve Selection for Harsh<br>\n\tOutdoor Applications<\/p>\n\t<p style=\"text-align: left; font-size: 12px;\">By: Fluid Gas Handing Team on Tuesday, October 4, 2016<\/p>\n<\/div>\n<\/div>\n<\/div>",
+                     "language":"-1"
+                  }
+               ],
+               "baseMarketingSpotActivityID":"715902236",
+               "contentFormatId":"2",
+               "properties":[  
+                  {  
+                     "baseMarketingKey":"mktActivityDescription"
+                  },
+                  {  
+                     "baseMarketingValue":"1.0",
+                     "baseMarketingKey":"displaySequence"
+                  }
+               ],
+               "contentName":"ParkerB2BContentRelatedArticle",
+               "baseMarketingSpotDataType":"MarketingContent",
+               "contentId":"715902236",
+               "contentFormatName":"Text",
+               "activityPriority":"1",
+               "contentStoreId":"24151",
+               "baseMarketingSpotActivityName":"ParkerB2BContentRelatedArticle",
+               "contentClickAction":"None"
+            }
+         ],
+         "defaultContentDisplaySequence":[  
+            {  
+               "displaySequence":"1.0",
+               "resultFormat":"MarketingContent",
+               "resultId":"715902236"
+            }
+         ]
+      }
+   ],
+   "resourceName":"espot"
+}

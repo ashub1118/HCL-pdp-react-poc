@@ -1,0 +1,54 @@
+{  
+   "resourceId":"https:\/\/cor089ya4.us.parker.corp\/wcs\/resources\/lbs\/store\/24151\/espot\/ParkerB2BLocalManufactureESpot?DM_SubstitutionValue3=en_US&DM_SubstitutionValue2=http:\/\/phdev.parker.com\/en\/b2bstore&DM_SubstitutionValue5=&pageName=CatalogEntryPage&DM_SubstitutionValue4=&DM_ReturnCatalogEntryId=true&DM_SubstitutionValue1=B2BStore&errorViewName=ProductDisplayErrorView&DM_contextPath=&pageGroup=CatalogEntry&DM_SubstitutionName2=[fullPathHomeURL]&DM_SubstitutionName3=[langlocale]&DM_SubstitutionName4=[productTotalCount]&DM_SubstitutionName5=[contentTotalCount]&DM_EmsName=ParkerB2BESpotDemo&DM_SubstitutionName1=[storeName]&productId=927670&DM_ReqCmd=ProductDisplay&DM_imagePath=\/wcsstore\/ParkerB2BStorefrontAssetStore\/&catalogId=14051&langId=-1&DM_marketingSpotBehavior=&storeId=24151&DM_ReturnCatalogGroupId=true",
+   "MarketingSpotData":[  
+      {  
+         "marketingSpotIdentifier":"715878889",
+         "eSpotName":"ParkerB2BLocalManufactureESpot",
+         "behavior":"0",
+         "nextTimeLimit":"-1",
+         "baseMarketingSpotActivityData":[  
+            {  
+               "activityIdentifierID":"0",
+               "MarketingContentDescription":[  
+                  {  
+
+                  }
+               ],
+               "marketingContentDescription":[  
+                  {  
+                     "marketingText":"<div>\n<div class=\"row\">\n<div class=\"col-sm-12\">\n<div>\n<strong>Local Manufacturer<\/strong>\n<div>\n     <span>\n        Cleveland Manufacturing Inc<br>\n        1234 Rock n Roll Ave.<br>\n        Cleveland, Ohio 44102\n         <\/span>\n     <span>\n        216-223-8990<br>\n        800-234-9900 \n     <\/span>\n         <p class=\"email-us\">Email Manufacturer<\/p>\n         \n         <hr>\n         \n     <\/div>\n     \n     <div class=\"live-chat\">\n     <span>Begin Live chat <\/span>\n     <\/div>    \n<\/div>\n    \n\n<div class=\"row\">\n<div class=\"col-sm-12\">    \n <div class=\"contact-number\">\n         \n         <p>Need Help? Call Now:<\/p>\n     \n     <hr>\n         <p>1-800-000-1234<\/p>\n     \n     <\/div>\n     \n         <div class=\"parker-account\">\n         \n         <strong>\n                    Get your Parker account today!<\/strong>\n         <p>Benefits benefits benefits dolor sit\namet, cons benefits benefits dolor sit\namet, cons benefits benefits dolor sit\namet, cons aliqua<\/p>\n             \n            <button>REGISTER NOW<\/button>\n     \n     <\/div>  \n    \n<\/div>    \n<\/div>    \n    \n<\/div>\n<\/div>\n<\/div> \n<\/div>       \n",
+                     "language":"-1"
+                  }
+               ],
+               "baseMarketingSpotActivityID":"715902734",
+               "contentFormatId":"2",
+               "properties":[  
+                  {  
+                     "baseMarketingKey":"mktActivityDescription"
+                  },
+                  {  
+                     "baseMarketingValue":"1.0",
+                     "baseMarketingKey":"displaySequence"
+                  }
+               ],
+               "contentName":"ParkerB2BLocalManufactureContent",
+               "baseMarketingSpotDataType":"MarketingContent",
+               "contentId":"715902734",
+               "contentFormatName":"Text",
+               "activityPriority":"1",
+               "contentStoreId":"24151",
+               "baseMarketingSpotActivityName":"ParkerB2BLocalManufactureContent",
+               "contentClickAction":"None"
+            }
+         ],
+         "defaultContentDisplaySequence":[  
+            {  
+               "displaySequence":"1.0",
+               "resultFormat":"MarketingContent",
+               "resultId":"715902734"
+            }
+         ]
+      }
+   ],
+   "resourceName":"espot"
+}

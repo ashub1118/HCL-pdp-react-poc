@@ -1,0 +1,75 @@
+{  
+   "supportAssetCount":"4",
+   "parkerSupportAssetDetailsLangMap":{  
+      "EN":{  
+         "Literature and Reference Materials":[  
+            {  
+               "assetUrl":"http:\/\/preview.parker.com\/Literature\/Quick Coupling\/catalog_sections\/ST Series-Catalog 3800_SectionB.pdf",
+               "assetTitle":"ST Series Catalog",
+               "_type":"JavaClass",
+               "languageCode":"EN",
+               "assetType":"Static File",
+               "_classname":"com.parker.commerce.catalog.commands.ParkerSupportAssetDetails",
+               "description":"ST Series Catalog",
+               "priority":"3",
+               "supportCategoryList":null,
+               "class":"com.parker.commerce.catalog.commands.ParkerSupportAssetDetails",
+               "supportCategory":null,
+               "type":"N",
+               "isPart":null,
+               "isRegistrationRequired":"N"
+            }
+         ],
+         "Product Demos & Tutorials":[  
+            {  
+               "assetUrl":"https:\/\/preview.parker.com\/parker\/otvsvideo\/otvsvideoresponsive.jsp?id=2064788DE76932CBD9AA2E66603EAE30",
+               "assetTitle":"Parker Rectus--KA Series Single Shut-Off Quick Coupling Animation",
+               "_type":"JavaClass",
+               "languageCode":"EN",
+               "assetType":"Video",
+               "_classname":"com.parker.commerce.catalog.commands.ParkerSupportAssetDetails",
+               "description":"Discover 3D Animation of KA Series Single Shut-Off Quick Coupling",
+               "priority":"3",
+               "supportCategoryList":null,
+               "class":"com.parker.commerce.catalog.commands.ParkerSupportAssetDetails",
+               "supportCategory":null,
+               "type":"N",
+               "isPart":null,
+               "isRegistrationRequired":"N"
+            },
+            {  
+               "assetUrl":"https:\/\/preview.parker.com\/parker\/otvsvideo\/otvsvideoresponsive.jsp?id=83851F52B97929A954492DE1473924EC",
+               "assetTitle":"Parker Rectus--KB Series Double Shut-Off Quick Coupling Animation",
+               "_type":"JavaClass",
+               "languageCode":"EN",
+               "assetType":"Video",
+               "_classname":"com.parker.commerce.catalog.commands.ParkerSupportAssetDetails",
+               "description":"Discover 3D Animation of KB Series Double Shut-Off Quick Coupling Animation",
+               "priority":"3",
+               "supportCategoryList":null,
+               "class":"com.parker.commerce.catalog.commands.ParkerSupportAssetDetails",
+               "supportCategory":null,
+               "type":"N",
+               "isPart":null,
+               "isRegistrationRequired":"N"
+            },
+            {  
+               "assetUrl":"https:\/\/preview.parker.com\/parker\/otvsvideo\/otvsvideoresponsive.jsp?id=4A56C7CC16C8B6AE51F7B6D0A5FB1E90",
+               "assetTitle":"Parker Rectus--KL Series Leak-Free Quick Coupling Animation",
+               "_type":"JavaClass",
+               "languageCode":"EN",
+               "assetType":"Video",
+               "_classname":"com.parker.commerce.catalog.commands.ParkerSupportAssetDetails",
+               "description":"Discover 3D Animation fo KL Series Leak-Free Quick Coupling",
+               "priority":"3",
+               "supportCategoryList":null,
+               "class":"com.parker.commerce.catalog.commands.ParkerSupportAssetDetails",
+               "supportCategory":null,
+               "type":"N",
+               "isPart":null,
+               "isRegistrationRequired":"N"
+            }
+         ]
+      }
+   }
+}
