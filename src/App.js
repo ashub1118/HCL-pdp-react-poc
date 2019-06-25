@@ -125,13 +125,10 @@ class App extends Component {
         ++_1c3;
 
        var checkTemplate = html.substring(_1c2,_1c3)
-       if(checkTemplate.indexOf("template")!=-1){
-         continue;
-       }
         
         var _1c4=html.indexOf(_1be,_1c3);
         
-        if(_1c4==-1){
+        if(_1c4==-1 ){
         
         position=_1c3;
         
@@ -144,9 +141,12 @@ class App extends Component {
         var _1c5=html.substring(_1c2,_1c4+_1c1);
         
         _1c5=_1c5.substring(_1c3-_1c2,_1c5.length-_1c1);
-        
+        if(_1c5.indexOf("template")!=-1){
         data+=_1c5;
-        
+        }
+        if(_1c5.indexOf("template")==1){
+          html = _1c5+html;
+          }
         var pre=html.substring(0,_1c2);
         
         html=pre+html.substring(_1c4+_1c1);
@@ -168,7 +168,6 @@ class App extends Component {
         }
         let returnedDataHeader = separate(resp.response.docs[0].HEADER);
         let returnedDataFooter = separate(resp.response.docs[0].FOOTER);
-        // console.log(returnedDataFooter);
        this.props.dispatch(getHeaderHTML(returnedDataHeader));
        this.props.dispatch(getFooterHTML(returnedDataFooter));
     });

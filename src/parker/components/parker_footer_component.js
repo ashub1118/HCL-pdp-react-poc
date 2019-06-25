@@ -36,17 +36,17 @@ class FooterComponent extends React.Component {
       
 
   render() {
-    // $(".panel-heading").not(".plans_section .panel-heading").on("click","a",function(){$(this).parents(".panel-group").find(".panel-heading a").filter(function(){return !$(this).hasClass("collapsed")}).not($(this)).click()});
-    // //mobile view fix - If one menu is opened it should close the other menu  
-    // $('.glyphicon-search_icon').click(function(){
-    //     //search box traingle location fix
-    //     if ( !$('.logo_section ').is(":visible") && $('.navheaderButton').hasClass( "opened" ) ) { 
-    //         $(".navheaderButton").click();
-    //     }
-    //     setTimeout(function(){
-    //       $('.triangle').css( 'margin-right',(($('.advanced-search-container').width()+$('.advanced-search-container').offset().left)-($('.search_btn').offset().left))+20+"px");
-    //     }, 400);
-    // });
+    $(".panel-heading").not(".plans_section .panel-heading").on("click","a",function(){$(this).parents(".panel-group").find(".panel-heading a").filter(function(){return !$(this).hasClass("collapsed")}).not($(this)).click()});
+    //mobile view fix - If one menu is opened it should close the other menu  
+    $('.glyphicon-search_icon').click(function(){
+        //search box traingle location fix
+        if ( !$('.logo_section ').is(":visible") && $('.navheaderButton').hasClass( "opened" ) ) { 
+            $(".navheaderButton").click();
+        }
+        setTimeout(function(){
+          $('.triangle').css( 'margin-right',(($('.advanced-search-container').width()+$('.advanced-search-container').offset().left)-($('.search_btn').offset().left))+20+"px");
+        }, 400);
+    });
       try{
     if(this.state.load && this.state.script){
         this.loadScript('https://www.parker.com/parker/jsp/HeaderFooterAPiTest/resources/js/globalSearch.js?path=parker')

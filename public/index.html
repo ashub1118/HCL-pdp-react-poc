@@ -52,6 +52,7 @@
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
+    
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -66,12 +67,16 @@
 		<script src="https://www.parker.com/parker/jsp/HeaderFooterAPiTest/resources/js/handlebars.min.js"></script>
 		<!-- <script src="https://www.parker.com/parker/jsp/HeaderFooterAPiTest/resources/js/globalSearch.js?path=parker"></script> -->
     <script src="https://www.parker.com/parker/jsp/HeaderFooterAPiTest/resources/js/aqs.js?v=1"></script>
+    
     <link href="https://www.parker.com/parker/newparkerstyle/responsive/css/homepage2015/style.css" rel="stylesheet" type="text/css">
     <link href="./assets/css/App.css" rel="stylesheet" type="text/css">
     <link href="https://www.parker.com/parker/jsp/HeaderFooterAPiTest/resources/css/styles-header-2017.css?path=parker" rel="stylesheet" type="text/css">
     <script src="https://www.parker.com/parker/newparkerstyle/responsive/js/bootstrap.js"></script>
     <script src="https://www.parker.com/parker/newparkerstyle/responsive/js/custom.js"></script>
+    <!-- <script id="aqs-flyout-template" type="text/x-handlebars-template" src="assets/js/aqs-template.js"></script> -->
 <script>
+  var searchdomain = "//search.parker.com";	
+  // var aqsSource="<div class='aqs-flyout'>{{#switch type}}{{#case 'product-series' 'category' 'part-number'}}{{#each docs}}{{#if this.feature}}<div class='type-highlight'><div class='highlight-wrapper'><h6>{{this.feature.taxonomy}}</h6><h3>{{this.feature.name}}</h3></div>{{#if this.feature.isPartButtonHide}}<a class='btn btn-white btn-default btn-xs-block dbl-line-btn pull-right' style='display:none' href='{{this.feature.url}}'>{{this.feature.translationsAQS.viewMLV}}</a>{{else}}<a class='btn btn-white btn-default btn-xs-block dbl-line-btn pull-right' href='{{this.feature.url}}'>{{this.feature.translationsAQS.viewMLV}}</a>{{/if}}</div>{{/if}}{{/each}}{{/case}}{{#case 'category-group'}}{{#each docs}}{{#if this.feature}}<div class='category-group'><div class='type-highlight'><h6>{{this.feature.taxonomy}}</h6><h3>{{this.feature.name}}</h3></div><div class='desc-wrapper'><div class='description'>{{#if this.feature.img}}<img class='thumbnail' src='{{this.feature.img}}'/>{{/if}}<div class='desc'>{{this.feature.desc}}</div></div><div class='action'><a class='btn btn-white btn-default btn-xs-block dbl-line-btn pull-right' href='{{this.feature.url}}'>{{this.feature.translationsAQS.viewCategoryMLV}}</a></div></div></div>{{/if}}{{/each}}{{/case}}{{#default}}{{/default}}{{/switch}}{{#compare 'category-group' '!==' type}}{{#each docs}}{{#if this.standard}}<div class='type-standard'><a href='{{this.standard.url}}'><div class='desc-wrapper'><div class='description'>{{#if this.standard.img}}<img class='thumbnail' src='{{this.standard.img}}'/>{{/if}}<p>{{this.standard.name}}</p>{{#if this.standard.partnum}}<h6>{{this.standard.translationsAQS.partMLV}} #:{{this.standard.partnum}}</h6>{{/if}}{{#if this.standard.parts}}<h6>{{this.standard.parts}} {{this.standard.translationsAQS.partMLV}}</h6>{{/if}}</div><a class='btn btn-white btn-default btn-xs-block dbl-line-btn pull-right' href='{{this.standard.url}}'>{{this.standard.translationsAQS.viewMLV}}</a></div></a></div>{{/if}}{{/each}}{{/compare}}{{#orCond type 'category' '||' 'product-series' }}{{#each docs}}{{#if this.feature}}{{#if this.feature.footerViewDesc}}<a href='{{this.feature.url}}'><div class='footer-aqs'>{{this.feature.footerViewDesc}}</div></a>{{/if}}{{/if}}{{/each}}{{/orCond}}</div>";
   jQuery.ajaxSetup({traditional:true})
 				jQuery.parker = {
 					search : {
@@ -106,13 +111,135 @@
       }else{
         footer=data;
       }
-      console.log(data);
+      //console.log(data);
       setTimeout(function(){ 
         eval(data); 
-      }, 3000);
-     var value=eval(data);
-     console.log(value);
+      }, 400);
+
+   //  console.log(value);
     }
   </script>
+  <script id="aqs-flyout-template" type="text/x-handlebars-template"> 
+    <div  class="aqs-flyout">
+        {{#switch type}}
+            {{#case 'product-series' 'category' 'part-number'}}
+                {{#each docs}}
+                    {{#if this.feature}}
+                    <div class="type-highlight">
+                        <div class="highlight-wrapper">
+                            <h6>{{this.feature.taxonomy}}</h6>
+                            <h3>{{this.feature.name}}</h3>
+                        </div>
+                        {{#if this.feature.isPartButtonHide}}
+                        <a class="btn btn-white btn-default btn-xs-block dbl-line-btn pull-right" style="display:none" href="{{this.feature.url}}">{{this.feature.translationsAQS.viewMLV}}</a>
+                            {{else}}
+                        <a class="btn btn-white btn-default btn-xs-block dbl-line-btn pull-right"  href="{{this.feature.url}}">{{this.feature.translationsAQS.viewMLV}}</a>
+                        {{/if}}
+                    </div>
+                    {{/if}}
+                {{/each}}
+            {{/case}}
+            
+            {{#case 'category-group'}}
+                {{#each docs}}
+                    {{#if this.feature}}
+                    <div class="category-group">
+                        <div class="type-highlight">
+                            <h6>{{this.feature.taxonomy}}</h6>
+                            <h3>{{this.feature.name}}</h3>
+                        </div>
+                        <div class="desc-wrapper">
+                            <div class="description">
+                                {{#if this.feature.img}}
+                                    <img class="thumbnail" src="{{this.feature.img}}"/>
+                                {{/if}}
+                                <div class="desc">
+                                {{this.feature.desc}}
+                                </div>
+                            </div>
+                            <div class="action">
+                                <a class="btn btn-white btn-default btn-xs-block dbl-line-btn pull-right" href="{{this.feature.url}}">{{this.feature.translationsAQS.viewCategoryMLV}}</a>
+                            </div>
+                        </div>
+                    </div>
+                    {{/if}}
+                {{/each}}
+            {{/case}}
+            
+            {{#default}}{{/default}}
+            
+        {{/switch}}
+        {{#compare 'category-group' '!==' type}}
+            {{#each docs}}
+                {{#if this.standard}}
+                    <div class="type-standard">
+                        <a href="{{this.standard.url}}">
+                        <div class="desc-wrapper">
+                            <div class="description">
+                                {{#if this.standard.img}}
+                                    <img class="thumbnail" src="{{this.standard.img}}"/>
+                                {{/if}}
+                                
+                                <p>{{this.standard.name}}</p>
+                                
+                                {{#if this.standard.partnum}}
+                                    <h6>{{this.standard.translationsAQS.partMLV}} #:{{this.standard.partnum}}</h6>
+                                {{/if}}
+                                {{#if this.standard.parts}}
+                                    <h6>{{this.standard.parts}} {{this.standard.translationsAQS.partMLV}}</h6>
+                                {{/if}}
+                            </div>
+                            <a class="btn btn-white btn-default btn-xs-block dbl-line-btn pull-right" href="{{this.standard.url}}">{{this.standard.translationsAQS.viewMLV}}</a>
+                        </div>
+                        </a>
+                    </div>
+                {{/if}}
+            {{/each}}
+        {{/compare}}	
+        {{#orCond type 'category' '||' 'product-series'  }}
+                {{#each docs}}
+                {{#if this.feature}}		
+                    {{#if this.feature.footerViewDesc}}
+                        <a href="{{this.feature.url}}">
+                        <div class="footer-aqs">{{this.feature.footerViewDesc}}</div>
+                        </a>	
+                    {{/if}}
+                {{/if}}
+                {{/each}}
+        {{/orCond}}	
+        
+    </div>
+     </script>
+     <script>
+     function parkerLoadHandlebarTemplate() {
+    jQuery.ajax({
+        url: 'https://www.parker.com/parker/jsp/search2017/app/parker/aqs/handlebar-templates.jsp',
+		data: {
+                localeCode:  jQuery.parker.search.localeCode               
+              },
+        success: function(template) {
+            jQuery('body').append(template);
+            var aqsSource = jQuery('#aqs-flyout-template').html();
+            aqsHbrTemplate = Handlebars.compile(aqsSource);
+
+            //Add a placeholder object to the search element
+            jQuery('.search-input').append('<div id="aqs-flyout"></div>');
+        }
+    });
+}
+
+$(".panel-heading").not(".plans_section .panel-heading").on("click","a",function(){$(this).parents(".panel-group").find(".panel-heading a").filter(function(){return !$(this).hasClass("collapsed")}).not($(this)).click()});
+    //mobile view fix - If one menu is opened it should close the other menu  
+    $('.glyphicon-search_icon').click(function(){
+        //search box traingle location fix
+        if ( !$('.logo_section ').is(":visible") && $('.navheaderButton').hasClass( "opened" ) ) { 
+            $(".navheaderButton").click();
+        }
+        setTimeout(function(){
+          $('.triangle').css( 'margin-right',(($('.advanced-search-container').width()+$('.advanced-search-container').offset().left)-($('.search_btn').offset().left))+20+"px");
+        }, 400);
+    });
+     </script>
+     
   </body>
 </html>

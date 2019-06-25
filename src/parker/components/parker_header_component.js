@@ -23,7 +23,6 @@ class HeaderComponent extends React.Component {
 
     
     render() {
-        console.log(this.state.script);
         try{
         if(this.state.script){
             window.evalScript(this.state.script,'header');
@@ -31,6 +30,7 @@ class HeaderComponent extends React.Component {
         }catch(e){
             //console.log(e);
         }
+        
         // if(this.state.script){
         //     try{
         //      var safeEval = require('safe-eval');        

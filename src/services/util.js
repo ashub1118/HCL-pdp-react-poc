@@ -97,9 +97,9 @@ export function getRelatedArticleInfo(func) {
 }
 
 export function getHeaderFooterInfo(func) {
-    const url='http://cor089a034:8080/SolrApi/solr/HeaderFooter/Template?id=687PDC&languageCode=EN&Coremetrics=0';
-    //const url = 'http://cor089yaw38:18080/SolrApi/solr/HeaderFooterPB/Template?id=687PDC&languageCode=EN&Coremetrics=0';
-    //const url = 'json/serverResponse.json';
+    //const url='http://cor089a034:8080/SolrApi/solr/HeaderFooter/Template?id=687PDC&languageCode=EN&Coremetrics=0';
+    const url = 'http://cor089yaw38:18080/SolrApi/solr/HeaderFooterPB/Template?id=687PDC&languageCode=EN&Coremetrics=0';
+   // const url = 'json/serverResponse.json';
     axios.get(url)
         .then((response) => {
             if (response.status === 200) {
