@@ -5,13 +5,16 @@ const initialState = {
     productSupport:{},
     parkerAccount:{},
     faqInfo:{},
-    relatedArticle:{}
+    relatedArticle:{},
+    headerData:{},
+    footerData:{}
 };
 
 const MainReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'GET_PRODUCTS':
         {
+            console.log('In reducer');
             return (Object.assign({}, state, { products: action.payload }));
         }
         case 'GET_ITEMS':
@@ -38,6 +41,14 @@ const MainReducer = (state = initialState, action) => {
         {
             return (Object.assign({}, state, { relatedArticle: action.payload }));
         }
+        case 'GET_HEADER_HTML':
+            {
+                return (Object.assign({}, state, { headerData: action.payload }));
+            }
+        case 'GET_FOOTER_HTML':
+            {
+                return (Object.assign({}, state, { footerData: action.payload }));
+            }
         default:
             return state;
     }

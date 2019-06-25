@@ -1,74 +1,69 @@
 import React from 'react';
-
+import $ from 'jquery';
 class FooterComponent extends React.Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            html: "",
+            style: "",
+            script: "",
+            load: false
+        }
+        
+    };
+    componentWillReceiveProps(newProps) {
+        console.log(newProps);
+        if(newProps.footerDetails!=null){
+        this.setState({
+           html: newProps.footerDetails.html,
+           style: newProps.footerDetails.style,
+           script: newProps.footerDetails.script,
+           load: true
+        });
     }
-    render() {
-        return (
-            <footer className="ph-footer">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-3 p-2 mt-3">   
-                            <ul className="ph-list">
-                                <li><a href="#"><img src="assets/img/logo.png" /></a></li>
-                                <li><a href="tel:18001234567">800-123-4567</a></li>
-                                <li><a href="#">sales@parker.com</a></li>
-                            </ul>
-                        </div>
-                        <div className="col-md-6">
-                            <h3>Products</h3>
-                            <div className="row">
-                                <div className="col-6">
-                                    <ul className="ph-list">
-                                        <li>
-                                            <a href="#">Aerospace 
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Air Preperation and Dryers</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Cylinders and Actuators</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">EMI Shildeing </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Filters, and Purifiers</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"> Fitings and Quick Couplings</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="col-6">
-                                    <ul className="ph-list">
-                                        <li><a href="#">Gas Generators</a></li>
-                                        <li><a href="#">Hose, Pipe, and Tubing </a></li>
-                                        <li><a href="#">Medical and Dental</a></li>
-                                        <li><a href="#"> Motors and Drives</a></li>
-                                        <li><a href="#"> Pumps </a></li>
-                                        <li><a href="#">Seals and O-Rings</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-3">
-                            <form>
-                                <label htmlFor="comments"><i className="icon fas fa-comment-alt"></i>Need Help? Live Chat Now.</label>
-                                <textarea id="comments"></textarea>
-                                <input type="submit" value="Submit" className="button accent-button round-button small-button"/>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div className="ph-global-footer" style={{'margin':'1.5rem 0'}}>
-                    <img className="responsive-image" src="assets/img/globalfooter.png"/>
-                </div>
-        </footer>
-        );
     }
+    componentDidMount() {  
+
+
+    }
+     loadScript = function(src) {
+        var tag = document.createElement('script');
+        tag.async = false;
+        tag.src = src;
+        document.getElementsByTagName('body').appendChild(tag);
+      }
+      
+
+  render() {
+    // $(".panel-heading").not(".plans_section .panel-heading").on("click","a",function(){$(this).parents(".panel-group").find(".panel-heading a").filter(function(){return !$(this).hasClass("collapsed")}).not($(this)).click()});
+    // //mobile view fix - If one menu is opened it should close the other menu  
+    // $('.glyphicon-search_icon').click(function(){
+    //     //search box traingle location fix
+    //     if ( !$('.logo_section ').is(":visible") && $('.navheaderButton').hasClass( "opened" ) ) { 
+    //         $(".navheaderButton").click();
+    //     }
+    //     setTimeout(function(){
+    //       $('.triangle').css( 'margin-right',(($('.advanced-search-container').width()+$('.advanced-search-container').offset().left)-($('.search_btn').offset().left))+20+"px");
+    //     }, 400);
+    // });
+      try{
+    if(this.state.load && this.state.script){
+        this.loadScript('https://www.parker.com/parker/jsp/HeaderFooterAPiTest/resources/js/globalSearch.js?path=parker')
+        // const script = document.createElement("script");
+        // script.src = "https://www.parker.com/parker/jsp/HeaderFooterAPiTest/resources/js/globalSearch.js?path=parker";
+        // script.async = true;
+        // script.onload = () => this.scriptLoaded();
+        // document.body.appendChild(script);
+        window.evalScript(this.state.script,'footer');
+        }
+    }catch(e){
+        console.log()
+    }
+              return (
+          <div  className="wrapper" dangerouslySetInnerHTML={{__html: this.state.html}}></div>
+      );
+  }
+  
 }
-export default FooterComponent; 
+export default FooterComponent;

@@ -14,6 +14,28 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <script type="text/javascript" src="https://www.parker.com/parker/ruxitagentjs_ICA2SVdfhjoqru_10169190521113456.js" data-dtconfig="app=da583705d7d2c14a|featureHash=ICA2SVdfhjoqru|srsr=25000|rdnt=1|uxrgce=1|srms=1,1,,,|uxrgcm=100,25,300,3;100,25,300,3|dpvc=1|md=1=cloginId|lastModification=1560886468381|dtVersion=10169190521113456|tp=500,50,0,1|uxdcw=1500|agentUri=/parker/ruxitagentjs_ICA2SVdfhjoqru_10169190521113456.js|reportUrl=/parker/rb_bf59092xlf|rid=RID_959329751|rpid=-1190400045|domain=parker.com"></script><link href="/parker/newparkerstyle/responsive/css/font-awesome.min.css" rel="stylesheet">
+		<link href="https://www.parker.com/parker/newparkerstyle/responsive/css/bootstrap.css" rel="stylesheet" type="text/css">
+		
+		<link href="https://www.parker.com/parker/newparkerstyle/_cassette/asset/Content/shoppingcart.css" type="text/css" rel="stylesheet"/>
+		<link href="https://www.parker.com/parker/newparkerstyle/responsive/css/newHomeCustom.css" type="text/css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://www.parker.com/parker/newparkerstyle/responsive/css/ResponsiveCookieBanner.css" type="text/css">
+		<link rel="stylesheet" href="https://www.parker.com/parker/newparkerstyle/responsive/css/customlogo.css" type="text/css">
+		
+		<!-- CSS for Search and left flyout-->
+		<link href="https://www.parker.com/parker/jsp/HeaderFooterAPiTest/resources/css/jquery.typeahead.css?path=parker" rel="stylesheet" type="text/css">
+		<link href="https://www.parker.com/parker/jsp/HeaderFooterAPiTest/resources/css/aqs-handlebar.css?v=1" rel="stylesheet" type="text/css">
+		<link href="https://www.parker.com/parker/newparkerstyle/_cassette/asset/Content/quote.css" type="text/css" rel="stylesheet"/>
+		
+    <!-- Global JS for Page-->
+    <script src="https://www.parker.com/parker/newparkerstyle/responsive/js/jquery-1.11.1.min.js"></script>
+  
+		<script type="text/javascript" src="https://www.parker.com/parker/newparkerstyle/responsive/js/jquery.bootstrap-responsive-tabs.min.js"></script>
+		<script type="text/javascript" src="https://www.parker.com/parker/newparkerstyle/responsive/js/readmore.min.js"></script>
+    <script type="text/javascript" src="https://www.parker.com/parker/newparkerstyle/responsive/js/placeholder.min.js"></script>
+    
+    
+    
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -40,5 +62,57 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="https://www.parker.com/parker/jsp/HeaderFooterAPiTest/resources/js/jquery.typeahead.js"></script>
+		<script src="https://www.parker.com/parker/jsp/HeaderFooterAPiTest/resources/js/handlebars.min.js"></script>
+		<!-- <script src="https://www.parker.com/parker/jsp/HeaderFooterAPiTest/resources/js/globalSearch.js?path=parker"></script> -->
+    <script src="https://www.parker.com/parker/jsp/HeaderFooterAPiTest/resources/js/aqs.js?v=1"></script>
+    <link href="https://www.parker.com/parker/newparkerstyle/responsive/css/homepage2015/style.css" rel="stylesheet" type="text/css">
+    <link href="./assets/css/App.css" rel="stylesheet" type="text/css">
+    <link href="https://www.parker.com/parker/jsp/HeaderFooterAPiTest/resources/css/styles-header-2017.css?path=parker" rel="stylesheet" type="text/css">
+    <script src="https://www.parker.com/parker/newparkerstyle/responsive/js/bootstrap.js"></script>
+    <script src="https://www.parker.com/parker/newparkerstyle/responsive/js/custom.js"></script>
+<script>
+  jQuery.ajaxSetup({traditional:true})
+				jQuery.parker = {
+					search : {
+						localeCode:'EN',
+						searchPage:false,
+						divisionDesc:'687PDC'.replace('#','').replace('$',''),
+						isDivision:function(){return 'Country' =='Division'},
+						isCountry:function(){return 'Country' =='Country'},
+						ecomBasePath: '//ph.parker.com',
+						translationsAQS:{
+							viewMLV:'View',
+							viewCategoryMLV:'View Category',
+							partNumberMLV:'Part number',
+							productCategoryMLV:'Product Category',
+							productSeriesMLV:'Product Series',
+							partsMLV:'Parts',
+							partMLV:'Part',
+							inMLV:'In',
+							suggestionsMLV:'Suggestions',
+							productCategoriesMLV:'Product Categories',
+							viewAllSeriesMLV:'View all series',
+							viewAllPartsMLV:'View All Parts'
+						}
+					}
+        };
+        
+  var header;
+  var footer;
+    function evalScript(data,type){
+      if(type=='header'){
+        header=data;
+      }else{
+        footer=data;
+      }
+      console.log(data);
+      setTimeout(function(){ 
+        eval(data); 
+      }, 3000);
+     var value=eval(data);
+     console.log(value);
+    }
+  </script>
   </body>
 </html>

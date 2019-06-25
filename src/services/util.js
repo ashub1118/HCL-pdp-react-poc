@@ -7,7 +7,6 @@ export function getProductDetails(func) {
             if (response.status === 200) {
                 func(response.data);
             }
-
         })
         .catch((error) => {
             console.log("error = ", error);
@@ -97,3 +96,35 @@ export function getRelatedArticleInfo(func) {
         });
 }
 
+export function getHeaderFooterInfo(func) {
+    const url='http://cor089a034:8080/SolrApi/solr/HeaderFooter/Template?id=687PDC&languageCode=EN&Coremetrics=0';
+    //const url = 'http://cor089yaw38:18080/SolrApi/solr/HeaderFooterPB/Template?id=687PDC&languageCode=EN&Coremetrics=0';
+    //const url = 'json/serverResponse.json';
+    axios.get(url)
+        .then((response) => {
+            if (response.status === 200) {
+                func(response.data);
+            }
+        })
+        .catch((error) => {
+            console.log("error = ", error);
+        });
+}
+// export function getHeaderFooterInfo(func) {
+// axios({
+//     url: 'http://cor089yaw38:18080/SolrApi/solr/HeaderFooterPB/Template?id=687PDC&languageCode=EN&Coremetrics=0',
+//     method: 'get',
+//     headers: {
+//         Access-Control-Allow-Origin:"*",
+//         Access-Control-Allow-Credentials: true
+//     }
+//  })
+//  .then(response => {
+//     if (response.status === 200) {
+//         func(response.data);
+//     }
+//  }) 
+//  .catch(err => {
+//     console.log(err);
+//  })
+// };

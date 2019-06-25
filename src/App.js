@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { Route, withRouter } from 'react-router-dom';
 
-import './App.css';
+//import './App.css';
 
 import HeaderComponent from "./parker/components/parker_header_component";
 import BreadCrumbComponent from "./parker/components/breadcrumb_component";
@@ -23,7 +23,8 @@ import {
   getProductSupportDetails, 
   getParkerAccountInfo,
   getFrequentlyAskedQuestionInfo,
-  getRelatedArticleInfo
+  getRelatedArticleInfo,
+  getHeaderFooterInfo
 } from "./services/util";
 
 import { 
@@ -33,7 +34,9 @@ import {
   getProductSupport,
   getParkerAccount,
   getFrequentlyAskedQuestion,
-  getRelatedArticle
+  getRelatedArticle,
+  getHeaderHTML,
+  getFooterHTML
 } from "./actions/main-action";
 
 class App extends Component {
@@ -42,12 +45,17 @@ class App extends Component {
     super(props);
     this.state = {
       productsCatalogEntryView : [],
-      itemsCatalogEntryView : []
+      itemsCatalogEntryView : [],
+      headerData:[],
+      footerData:[]
     }
   }
 
   componentDidMount() {
     getProductDetails((resp) => {
+      // console.log(resp);
+      // console.log(getProducts(resp));
+      // console.log(this.props);
       this.props.dispatch(getProducts(resp));
     });
     getItemDetails((resp)=>{
@@ -73,11 +81,103 @@ class App extends Component {
     getRelatedArticleInfo((resp)=>{
        this.props.dispatch(getRelatedArticle(resp));
     });
+
+    getHeaderFooterInfo((resp) => {
+      function separate (html){
+        let position;
+
+        var _1bb={html:"",script:null,style:null};
+        
+        if(!html){
+        
+        return _1bb;
+        
+        }
+        
+        var _1bc=function(_1bd,_1be){
+        
+        var _1bf=false;
+        
+        var data="";
+        
+        var _1c1=_1be.length;
+        
+        while(true){
+        
+        var _1c2=html.indexOf(_1bd,0);
+        
+        if(_1c2==-1){
+        
+        break;
+        
+        }
+        
+        var _1c3=html.indexOf(">",_1c2);
+        
+        if(_1c3==-1){
+        
+        position=_1c2+1;
+        
+        break;
+        
+        }
+        
+        ++_1c3;
+
+       var checkTemplate = html.substring(_1c2,_1c3)
+       if(checkTemplate.indexOf("template")!=-1){
+         continue;
+       }
+        
+        var _1c4=html.indexOf(_1be,_1c3);
+        
+        if(_1c4==-1){
+        
+        position=_1c3;
+        
+        break;
+        
+        }
+        
+        _1bf=true;
+        
+        var _1c5=html.substring(_1c2,_1c4+_1c1);
+        
+        _1c5=_1c5.substring(_1c3-_1c2,_1c5.length-_1c1);
+        
+        data+=_1c5;
+        
+        var pre=html.substring(0,_1c2);
+        
+        html=pre+html.substring(_1c4+_1c1);
+        
+        }
+        
+        return _1bf?data:null;
+        
+        };
+        
+        _1bb.script=_1bc("<script","</script>");
+        
+        _1bb.style=_1bc("<style","</style>");
+        
+        _1bb.html=html;
+        
+        return _1bb;
+        
+        }
+        let returnedDataHeader = separate(resp.response.docs[0].HEADER);
+        let returnedDataFooter = separate(resp.response.docs[0].FOOTER);
+        // console.log(returnedDataFooter);
+       this.props.dispatch(getHeaderHTML(returnedDataHeader));
+       this.props.dispatch(getFooterHTML(returnedDataFooter));
+    });
   }
 
   componentWillReceiveProps(newProps) {
     let productsCatalogEntryView = [];
     let itemsCatalogEntryView = [];
+    // let headerData = [];
 
     if(Object.keys(newProps.products).length > 0) {
       productsCatalogEntryView = newProps.products.catalogEntryView;
@@ -86,16 +186,18 @@ class App extends Component {
     if(Object.keys(newProps.items).length > 0) {
       itemsCatalogEntryView = newProps.items.catalogEntryView;
     }
+
     this.setState({
       productsCatalogEntryView,
-      itemsCatalogEntryView
+      itemsCatalogEntryView,
+      
     });
   }
 
   render() {
     return (
       <div>
-        <HeaderComponent></HeaderComponent>
+        <HeaderComponent headerDetails={this.props.headerData}></HeaderComponent>
         <div className="container-fluid px-4">
           <BreadCrumbComponent 
             breadCrumbDetails = { this.props.breadCrumb } 
@@ -121,7 +223,7 @@ class App extends Component {
         <SimilarItemsComponent/>
         <FrequentlyAskedQuestionsComponent faqInfo = { this.props.faqInfo } />
         <RecentArticlesComponent relatedArticle = { this.props.relatedArticle } />
-        <FooterComponent/>
+        <FooterComponent footerDetails={this.props.footerData}></FooterComponent>
       </div>
     );
   }
@@ -136,8 +238,9 @@ const mapStateToProps = (state) => ({
   productSupport: state.productSupport,
   parkerAccount: state.parkerAccount,
   faqInfo: state.faqInfo,
-  relatedArticle: state.relatedArticle
-
+  relatedArticle: state.relatedArticle,
+  headerData : state.headerData,
+  footerData: state.footerData
 });
 
 const mapDispatchToProps = dispatch => ({

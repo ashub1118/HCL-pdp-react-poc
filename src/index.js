@@ -9,8 +9,13 @@ import MainReducer from './reducers/main-reducer';
 
 import './index.css';
 import App from './App';
-import 'bootstrap/dist/css/bootstrap.css';
+//  import 'bootstrap/dist/css/bootstrap.css';
 import registerServiceWorker from './registerServiceWorker';
+import 'react-app-polyfill/ie11';
+
+import 'react-app-polyfill/ie9';
+
+import 'react-app-polyfill/stable';
 
 const store = createStore(MainReducer);
 

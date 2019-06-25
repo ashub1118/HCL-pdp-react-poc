@@ -1,4 +1,5 @@
 export function getProducts(payload) {
+  console.log('In products');
   return { 
       type: "GET_PRODUCTS", 
       payload 
@@ -44,6 +45,20 @@ export function getFrequentlyAskedQuestion(payload) {
 export function getRelatedArticle(payload) {
   return { 
       type: "GET_RELATED_ARTICLE", 
+      payload 
+    }
+}
+
+export function getHeaderHTML(payload) {
+  return { 
+      type: "GET_HEADER_HTML", 
+      payload 
+    }
+}
+
+export function getFooterHTML(payload) {
+  return { 
+      type: "GET_FOOTER_HTML", 
       payload 
     }
 }
