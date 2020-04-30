@@ -5,7 +5,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "react": "^16.8.6",
     "react-accessible-accordion": "^3.0.0",
     "react-app-polyfill": "^1.0.1",
